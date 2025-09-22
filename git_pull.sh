@@ -5,10 +5,13 @@
 
 # Der aktuelle Status wird dann in /opt/status protokolliert
 
+datum=$(date)
+echo "pull probiert" $datum >> /var/log/niedernburg.log
+
 git clone https://github.com/gischupa/mint.git /tmp/mint
 cd /tmp/mint
 
-echo "git pull gelaufen" >> /var/log/niedernburg.log
+echo "git pull gelaufen" $datum >> /var/log/niedernburg.log
 
 ./base.sh
 

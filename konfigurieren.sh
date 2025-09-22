@@ -5,7 +5,7 @@ cp copy-settings.service  /etc/systemd/system/copy-settings.service
 systemctl enable copy-settings.service
 
 
-cp git_pull.sh.sh  /usr/local/bin/git_pull.sh
+cp git_pull.sh  /usr/local/bin/git_pull.sh
 cp git-pull.service  /etc/systemd/system/git-pull.service
 systemctl enable git-pull.service
 
