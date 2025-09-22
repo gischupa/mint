@@ -1,0 +1,11 @@
+[Unit]
+Description=Copy user settings from pupil to schueler
+After=systemd-user-sessions.service
+Requires=systemd-user-sessions.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/copy-settings.sh
+
+[Install]
+WantedBy=multi-user.target

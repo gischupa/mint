@@ -1,0 +1,11 @@
+[Unit]
+Description=get config from git
+After=systemd-user-sessions.service
+Requires=systemd-user-sessions.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/git_pull.sh
+
+[Install]
+WantedBy=multi-user.target
