@@ -9,5 +9,9 @@ cp git-pull.service  /etc/systemd/system/git-pull.service
 systemctl enable git-pull.service
 
 
-echo "tmpfs                                     /home/schueler tmpfs   defaults   0 0" >> /etc/fstab
+schueler=$(grep schueler /etc/fstab)
 
+if [ "x"$schueler = "x" ];
+  then
+    echo "tmpfs                                     /home/schueler tmpfs   defaults   0 0" >> /etc/fstab
+  fi

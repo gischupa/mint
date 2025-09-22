@@ -8,6 +8,8 @@
 git clone https://github.com/gischupa/mint.git /tmp/mint
 cd /tmp/mint
 
+echo "git pull gelaufen" >> /var/log/niedernburg.log
+
 ./base.sh
 
 exit 0
